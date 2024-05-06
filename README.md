@@ -1,13 +1,13 @@
-# Weapon-Detection-In-Video
+# yolov8 weapon detection (security surviellance) webapp
 
-Welcome to weapon detection system in video camera using yolov8s model
-In this project we have created a system that can basically detect weapons(guns only for now but you can train it to detect knifes etc as well) from video cameras and then send alerts to responsible team.
-There is also a feature in which if the model detects there is weapon present in the frame then it will capture a picture and then store it in your local machine.
-At once you can also use multiple cameras to feed from different angles.
-after a gun is detected and alert is there you can reset by clicking reset alerts if alerts/ issues are resolved.
+the model `yolov8sbest.pt` is trained using `roboflow` and `colab` and used here for inference.
 
-Only limitation is due to the high amount of inferences each frame the camera footage becomes slower but it can be resolved by using more powerful models and machines.
+the `streamlit` application is launched on the local server and shows available cameras for surviellance.
 
+activate virtual environment with the said dependencies and then run the webapp by `streamlit run app.py` in the main directory.
 
+each camera calls the `process` method from the `base` file and will save images with confidence>0.6 and 5 continuous frames in user directory.
 
- 
+![alt text](image.png)
+
+![alt text](image-1.png)
